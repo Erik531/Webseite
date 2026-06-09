@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KNX Consulting Jeschke – Ihr KNX-Experte für Bestandsanlagen</title>
+    <meta name="description" content="KNX Consulting Jeschke – Spezialist für Fehlersuche, Szenen-Programmierung, Visualisierung und Projektdaten-Wiederherstellung bei bestehenden KNX-Anlagen. Schnell, zuverlässig, transparent.">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="KNX Consulting Jeschke – Ihr KNX-Experte">
+    <meta property="og:description" content="Probleme mit Ihrer KNX-Anlage? Wir helfen schnell und unkompliziert.">
+    <meta property="og:type" content="website">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ============================================================
+         NAVIGATION
+    ============================================================ -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo">
+                <img src="assets/logo-wide.png" alt="KNX Consulting Jeschke" class="logo-wide">
+                <img src="assets/logo-square.png" alt="KNX Consulting Jeschke" class="logo-square">
+            </a>
+            <button class="nav-toggle" id="navToggle" aria-label="Menü öffnen" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#leistungen" class="nav-link">Leistungen</a></li>
+                <li><a href="#vorteile" class="nav-link">Vorteile</a></li>
+                <li><a href="#kontakt" class="nav-link">Kontakt</a></li>
+                <li><a href="#kontakt" class="btn-nav">Jetzt anfragen</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ============================================================
+         HERO
+    ============================================================ -->
+    <section class="hero" id="home">
+        <div class="hero-circuit" aria-hidden="true">
+            <svg class="circuit-svg" viewBox="0 0 1440 600" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+                <!-- Horizontale Leiterbahnen -->
+                <line x1="0" y1="120" x2="300" y2="120" stroke="rgba(255,255,255,0.06)" stroke-width="2"/>
+                <line x1="340" y1="120" x2="700" y2="120" stroke="rgba(255,255,255,0.06)" stroke-width="2"/>
+                <line x1="740" y1="120" x2="1100" y2="120" stroke="rgba(255,255,255,0.06)" stroke-width="2"/>
+                <line x1="1140" y1="120" x2="1440" y2="120" stroke="rgba(255,255,255,0.06)" stroke-width="2"/>
+                <line x1="0" y1="300" x2="200" y2="300" stroke="rgba(75,158,42,0.1)" stroke-width="2"/>
+                <line x1="240" y1="300" x2="600" y2="300" stroke="rgba(75,158,42,0.1)" stroke-width="2"/>
+                <line x1="640" y1="300" x2="900" y2="300" stroke="rgba(75,158,42,0.1)" stroke-width="2"/>
+                <line x1="940" y1="300" x2="1300" y2="300" stroke="rgba(75,158,42,0.1)" stroke-width="2"/>
+                <line x1="1340" y1="300" x2="1440" y2="300" stroke="rgba(75,158,42,0.1)" stroke-width="2"/>
+                <line x1="0" y1="480" x2="450" y2="480" stroke="rgba(255,255,255,0.05)" stroke-width="2"/>
+                <line x1="490" y1="480" x2="900" y2="480" stroke="rgba(255,255,255,0.05)" stroke-width="2"/>
+                <line x1="940" y1="480" x2="1440" y2="480" stroke="rgba(255,255,255,0.05)" stroke-width="2"/>
+                <!-- Vertikale Verbindungen -->
+                <line x1="300" y1="60" x2="300" y2="180" stroke="rgba(255,255,255,0.06)" stroke-width="2"/>
+                <line x1="700" y1="60" x2="700" y2="180" stroke="rgba(255,255,255,0.06)" stroke-width="2"/>
+                <line x1="200" y1="240" x2="200" y2="360" stroke="rgba(75,158,42,0.1)" stroke-width="2"/>
+                <line x1="600" y1="240" x2="600" y2="360" stroke="rgba(75,158,42,0.1)" stroke-width="2"/>
+                <line x1="900" y1="240" x2="900" y2="360" stroke="rgba(75,158,42,0.1)" stroke-width="2"/>
+                <line x1="450" y1="420" x2="450" y2="540" stroke="rgba(255,255,255,0.05)" stroke-width="2"/>
+                <!-- Knotenpunkte -->
+                <circle cx="300" cy="120" r="5" fill="rgba(75,158,42,0.3)"/>
+                <circle cx="700" cy="120" r="5" fill="rgba(75,158,42,0.3)"/>
+                <circle cx="1100" cy="120" r="5" fill="rgba(30,95,173,0.3)"/>
+                <circle cx="200" cy="300" r="5" fill="rgba(75,158,42,0.4)"/>
+                <circle cx="600" cy="300" r="6" fill="rgba(75,158,42,0.4)"/>
+                <circle cx="900" cy="300" r="5" fill="rgba(30,95,173,0.3)"/>
+                <circle cx="1300" cy="300" r="5" fill="rgba(30,95,173,0.3)"/>
+                <circle cx="450" cy="480" r="5" fill="rgba(75,158,42,0.3)"/>
+                <circle cx="940" cy="480" r="5" fill="rgba(30,95,173,0.3)"/>
+                <!-- Diagonal-Verbindungen -->
+                <line x1="300" y1="120" x2="200" y2="300" stroke="rgba(255,255,255,0.04)" stroke-width="1.5"/>
+                <line x1="700" y1="120" x2="600" y2="300" stroke="rgba(255,255,255,0.04)" stroke-width="1.5"/>
+                <line x1="1100" y1="120" x2="900" y2="300" stroke="rgba(255,255,255,0.04)" stroke-width="1.5"/>
+                <line x1="600" y1="300" x2="450" y2="480" stroke="rgba(255,255,255,0.04)" stroke-width="1.5"/>
+                <line x1="900" y1="300" x2="940" y2="480" stroke="rgba(255,255,255,0.04)" stroke-width="1.5"/>
+                <!-- Chip-Symbole -->
+                <rect x="280" y="280" width="40" height="40" rx="4" fill="none" stroke="rgba(75,158,42,0.25)" stroke-width="1.5"/>
+                <rect x="880" y="460" width="40" height="40" rx="4" fill="none" stroke="rgba(30,95,173,0.2)" stroke-width="1.5"/>
+                <rect x="1080" y="100" width="40" height="40" rx="4" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="1.5"/>
+                <!-- Chip-Pins -->
+                <line x1="280" y1="290" x2="268" y2="290" stroke="rgba(75,158,42,0.2)" stroke-width="1.5"/>
+                <line x1="280" y1="300" x2="268" y2="300" stroke="rgba(75,158,42,0.2)" stroke-width="1.5"/>
+                <line x1="280" y1="310" x2="268" y2="310" stroke="rgba(75,158,42,0.2)" stroke-width="1.5"/>
+                <line x1="320" y1="290" x2="332" y2="290" stroke="rgba(75,158,42,0.2)" stroke-width="1.5"/>
+                <line x1="320" y1="300" x2="332" y2="300" stroke="rgba(75,158,42,0.2)" stroke-width="1.5"/>
+                <line x1="320" y1="310" x2="332" y2="310" stroke="rgba(75,158,42,0.2)" stroke-width="1.5"/>
+            </svg>
+        </div>
+        <div class="hero-content fade-in">
+            <p class="hero-eyebrow">KNX-Spezialist für Bestandsanlagen</p>
+            <h1>Ihre KNX-Anlage<br>läuft nicht mehr<br><span class="hero-accent">wie gewünscht?</span></h1>
+            <p class="hero-sub">Der ursprüngliche Elektriker ist nicht mehr erreichbar? Szenen funktionieren nicht mehr korrekt? Projektdatei verloren? Ich finde schnell die Ursache und bringe Ihre Anlage wieder auf Vordermann.</p>
+            <div class="hero-ctas">
+                <a href="#leistungen" class="btn btn-primary">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 8 16 12 12 16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+                    Leistungen ansehen
+                </a>
+                <a href="#kontakt" class="btn btn-outline">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                    Direkt anfragen
+                </a>
+            </div>
+        </div>
+        <div class="hero-scroll-indicator" aria-hidden="true">
+            <span></span>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         PROBLEM SECTION
+    ============================================================ -->
+    <section class="problems" id="probleme">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2>Kennen Sie das?</h2>
+            </div>
+            <div class="problem-cards">
+                <div class="problem-card reveal">
+                    <div class="problem-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><line x1="23" y1="11" x2="23" y2="17"/><line x1="20" y1="14" x2="26" y2="14"/></svg>
+                    </div>
+                    <h3>Elektriker nicht mehr erreichbar</h3>
+                    <p>Der Fachbetrieb, der Ihre KNX-Anlage installiert und programmiert hat, ist insolvent, hat das Geschäft aufgegeben oder reagiert einfach nicht mehr auf Anfragen.</p>
+                </div>
+                <div class="problem-card reveal">
+                    <div class="problem-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                    </div>
+                    <h3>Szenen und Funktionen defekt</h3>
+                    <p>Nach einem Umbau, einem Gerätetausch oder einem Update laufen Szenen nicht mehr wie gewünscht. Licht, Rollladen oder Heizung reagieren falsch oder gar nicht.</p>
+                </div>
+                <div class="problem-card reveal">
+                    <div class="problem-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><line x1="9" y1="15" x2="15" y2="15"/></svg>
+                    </div>
+                    <h3>Projektdatei (.knxproj) fehlt</h3>
+                    <p>Die originale ETS-Projektdatei wurde nie übergeben, ist verloren gegangen oder der Datenträger des Elektrikers ist nicht mehr zugänglich. Ohne diese Datei ist jede Änderung extrem aufwändig.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         LEISTUNGEN
+    ============================================================ -->
+    <section class="services" id="leistungen">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2>Meine Leistungen</h2>
+            </div>
+            <div class="service-grid">
+
+                <div class="service-card reveal">
+                    <div class="service-card-header">
+                        <div class="service-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                        </div>
+                        <h3>Störungsbeseitigung</h3>
+                    </div>
+                    <p>Systematische Fehleranalyse an Ihrer bestehenden KNX-Anlage. Ich finde die Ursache – ob defekte Komponente, falsche Gruppenadresse oder fehlerhafte Parametrierung – und behebe sie dauerhaft.</p>
+                    <ul class="service-list">
+                        <li>Diagnose nicht reagierender Aktoren und Sensoren</li>
+                        <li>Busabzug und Spannungsversorgung prüfen</li>
+                        <li>ETS-Diagnose und Telegrammanalyse</li>
+                    </ul>
+                </div>
+
+                <div class="service-card reveal">
+                    <div class="service-card-header">
+                        <div class="service-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                        </div>
+                        <h3>Szenen-Programmierung</h3>
+                    </div>
+                    <p>Bestehende Szenen anpassen oder komplett neue Szenarien entwickeln – ganz nach Ihren Wünschen. Von einfachen Lichtszenen bis zu komplexen Gebäudeautomationsabläufen.</p>
+                    <ul class="service-list">
+                        <li>Licht-, Rollladen- und Heizungsszenen</li>
+                        <li>Zeitprogramme und Astrofunktionen</li>
+                        <li>Logikfunktionen und Verknüpfungen</li>
+                    </ul>
+                </div>
+
+                <div class="service-card reveal">
+                    <div class="service-card-header">
+                        <div class="service-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+                        </div>
+                        <h3>Programmanpassungen</h3>
+                    </div>
+                    <p>Ihre Anforderungen ändern sich – Ihre KNX-Anlage soll das widerspiegeln. Ich passe die bestehende Programmierung gezielt an, ohne unnötige Eingriffe in funktionierende Bereiche.</p>
+                    <ul class="service-list">
+                        <li>Neue Taster oder Schalter integrieren</li>
+                        <li>Funktionen erweitern oder ändern</li>
+                        <li>Energiesparfunktionen optimieren</li>
+                    </ul>
+                </div>
+
+                <div class="service-card reveal">
+                    <div class="service-card-header">
+                        <div class="service-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48"/></svg>
+                        </div>
+                        <h3>Projektdaten-Wiederherstellung</h3>
+                    </div>
+                    <p>Die .knxproj-Datei ist die Grundlage jeder KNX-Anlage. Falls diese fehlt, rekonstruiere ich das Projekt durch Auslesen der Geräte direkt vom Bus – ein echter Mehrwert, den wenige anbieten.</p>
+                    <ul class="service-list">
+                        <li>Adressen und Parameter aus Geräten auslesen</li>
+                        <li>Projektdatei für ETS rekonstruieren</li>
+                        <li>Vollständige Dokumentation für die Zukunft</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         VORTEILE
+    ============================================================ -->
+    <section class="why" id="vorteile">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2>Warum KNX Consulting Jeschke</h2>
+            </div>
+            <div class="why-grid">
+                <div class="why-card reveal">
+                    <div class="why-icon">
+                        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                    </div>
+                    <h3>Spezialist für Bestandsanlagen</h3>
+                    <p>Keine Neuinstallation, keine unnötigen Kosten – ich kenne die typischen Schwachstellen älterer und mittelneuer KNX-Anlagen und handle präzise.</p>
+                </div>
+                <div class="why-card reveal">
+                    <div class="why-icon">
+                        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                    </div>
+                    <h3>Schnelle Reaktionszeit</h3>
+                    <p>Ich reagiere zügig auf Ihre Anfrage und stimme mit Ihnen einen zeitnahen Termin ab – denn ein nicht funktionierendes Smart Home kann nervenaufreibend sein.</p>
+                </div>
+                <div class="why-card reveal">
+                    <div class="why-icon">
+                        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                    </div>
+                    <h3>Transparente Abrechnung</h3>
+                    <p>Klare Preise, keine versteckten Kosten. Ich erkläre Ihnen vorab, was ich tue und was es kostet – und halte mich an das, was wir vereinbart haben.</p>
+                </div>
+                <div class="why-card reveal">
+                    <div class="why-icon">
+                        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                    </div>
+                    <h3>KNX-Expertise</h3>
+                    <p>Fundiertes Wissen über das KNX-Protokoll, ETS-Software und die gängigen Geräte aller Hersteller. Ich kenne die Feinheiten, die den Unterschied machen.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         KONTAKT
+    ============================================================ -->
+    <section class="contact" id="kontakt">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2>Kontakt</h2>
+            </div>
+            <div class="contact-wrapper reveal">
+                <div class="contact-info">
+                    <h3>Direkt erreichbar</h3>
+                    <ul class="contact-list">
+                        <li>
+                            <div class="contact-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                            </div>
+                            <div>
+                                <span class="contact-label">E-Mail</span>
+                                <a href="mailto:jeschke.erik@outlook.de">jeschke.erik@outlook.de</a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="contact-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                            </div>
+                            <div>
+                                <span class="contact-label">Telefon</span>
+                                <a href="tel:+4915753623621">+49 157 53623621</a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="contact-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                            </div>
+                            <div>
+                                <span class="contact-label">Tätigkeitsgebiet</span>
+                                <span>Raum Frankfurt</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Name <span class="required">*</span></label>
+                            <input type="text" id="name" name="name" required autocomplete="name">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">E-Mail <span class="required">*</span></label>
+                            <input type="email" id="email" name="email" required autocomplete="email">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Telefon</label>
+                        <input type="tel" id="phone" name="phone" autocomplete="tel">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Ihre Nachricht <span class="required">*</span></label>
+                        <textarea id="message" name="message" rows="5" placeholder="Bitte beschreiben Sie kurz Ihr Anliegen: Welche KNX-Anlage haben Sie? Was funktioniert nicht? Wie können wir helfen?" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                        Nachricht senden
+                    </button>
+                    <p class="form-hint">* Pflichtfelder. Ihre Daten werden ausschließlich zur Bearbeitung Ihrer Anfrage verwendet.</p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         FOOTER
+    ============================================================ -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img src="assets/logo-wide.png" alt="KNX Consulting Jeschke" class="footer-logo">
+                    <p>Ihr Spezialist für bestehende KNX-Anlagen. Schnell, zuverlässig und transparent.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Leistungen</h4>
+                    <ul>
+                        <li><a href="#leistungen">Störungsbeseitigung</a></li>
+                        <li><a href="#leistungen">Szenen-Programmierung</a></li>
+                        <li><a href="#leistungen">KNX-Visualisierung</a></li>
+                        <li><a href="#leistungen">Projektdaten-Wiederherstellung</a></li>
+                        <li><a href="#leistungen">Programmanpassungen</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Unternehmen</h4>
+                    <ul>
+                        <li><a href="#vorteile">Vorteile</a></li>
+                        <li><a href="#kontakt">Kontakt</a></li>
+                        <li><a href="impressum.html">Impressum</a></li>
+                        <li><a href="datenschutz.html">Datenschutz</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Kontakt</h4>
+                    <p><a href="mailto:jeschke.erik@outlook.de">jeschke.erik@outlook.de</a></p>
+                    <p><a href="tel:+4915753623621">+49 157 53623621</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="year"></span> KNX Consulting Jeschke. Alle Rechte vorbehalten.</p>
+                <p class="footer-legal"><a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
