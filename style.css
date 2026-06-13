@@ -1162,3 +1162,54 @@ textarea:focus-visible {
     html { scroll-behavior: auto; }
     .hero-scroll-indicator span::before { animation: none; }
 }
+
+
+/* ============================================================
+   SEO REGION SECTION
+============================================================ */
+.seo-region {
+    background: var(--navy-dark);
+    padding: 4rem 0;
+    border-top: 1px solid rgba(255,255,255,0.05);
+}
+
+.seo-region-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.seo-region-content h2 {
+    font-size: clamp(1.4rem, 3vw, 1.9rem);
+    color: var(--white);
+    margin-bottom: 1.2rem;
+}
+
+.seo-region-content p {
+    color: var(--gray-light);
+    line-height: 1.8;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
+.seo-region-content strong {
+    color: var(--knx-green-light);
+}
+
+.seo-region-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+    margin-top: 1.5rem;
+}
+
+.seo-region-tags span {
+    background: rgba(75,158,42,0.12);
+    border: 1px solid rgba(75,158,42,0.3);
+    color: var(--knx-green-light);
+    padding: 0.3rem 0.8rem;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    font-weight: 500;
+}

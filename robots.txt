@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://knx-consulting-jeschke.de/sitemap.xml
