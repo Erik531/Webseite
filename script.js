@@ -92,36 +92,50 @@
     sections.forEach(s => observer.observe(s));
 })();
 
-// ─── Contact form → mailto ────────────────────────────────
+// ─── Contact form → Formspree ─────────────────────────────
 (function initContactForm() {
     const form = document.getElementById('contactForm');
     if (!form) return;
 
-    form.addEventListener('submit', e => {
+    form.addEventListener('submit', async e => {
         e.preventDefault();
 
-        const name    = form.querySelector('#name').value.trim();
-        const email   = form.querySelector('#email').value.trim();
-        const phone   = form.querySelector('#phone').value.trim();
-        const message = form.querySelector('#message').value.trim();
+        const btn = form.querySelector('button[type="submit"]');
+        const original = btn.innerHTML;
+        btn.disabled = true;
+        btn.innerHTML = '<span style="opacity:.6">Wird gesendet…</span>';
 
-        if (!name || !email || !message) return;
+        try {
+            const res = await fetch(form.action, {
+                method: 'POST',
+                body: new FormData(form),
+                headers: { 'Accept': 'application/json' }
+            });
 
-        const subjectLine = 'KNX Anfrage über Website';
-
-        const body = [
-            `Name: ${name}`,
-            `E-Mail: ${email}`,
-            phone ? `Telefon: ${phone}` : null,
-            '',
-            message
-        ].filter(line => line !== null).join('\n');
-
-        const mailto = `mailto:jeschke.erik@outlook.de`
-            + `?subject=${encodeURIComponent(subjectLine)}`
-            + `&body=${encodeURIComponent(body)}`;
-
-        window.location.href = mailto;
+            if (res.ok) {
+                form.innerHTML = `
+                    <div style="text-align:center;padding:2rem 0">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#4ade80" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom:1rem"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                        <p style="font-size:1.1rem;font-weight:600;margin-bottom:.5rem">Nachricht gesendet!</p>
+                        <p style="opacity:.7">Vielen Dank – ich melde mich so schnell wie möglich bei Ihnen.</p>
+                    </div>`;
+            } else {
+                const data = await res.json();
+                throw new Error(data?.errors?.[0]?.message || 'Unbekannter Fehler');
+            }
+        } catch (err) {
+            btn.disabled = false;
+            btn.innerHTML = original;
+            const hint = form.querySelector('.form-hint');
+            let errEl = form.querySelector('.form-error');
+            if (!errEl) {
+                errEl = document.createElement('p');
+                errEl.className = 'form-error';
+                errEl.style.cssText = 'color:#f87171;margin-top:.5rem;font-size:.9rem';
+                hint ? hint.before(errEl) : form.append(errEl);
+            }
+            errEl.textContent = `Fehler beim Senden: ${err.message}. Bitte versuchen Sie es erneut oder schreiben Sie direkt an jeschke.erik@outlook.de.`;
+        }
     });
 })();
 
