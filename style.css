@@ -39,7 +39,7 @@
 
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: var(--nav-height);
+    scroll-padding-top: calc(var(--nav-height) + env(safe-area-inset-top, 0px));
     -webkit-text-size-adjust: 100%;
 }
 
@@ -199,10 +199,11 @@ ul {
     left: 0;
     right: 0;
     z-index: 1000;
-    height: var(--nav-height);
     background: var(--white);
     box-shadow: 0 2px 12px rgba(27,43,78,0.10);
     transition: box-shadow 0.3s ease;
+    /* Status-Bar (iOS Safe Area) weiß hinterlegen */
+    padding-top: env(safe-area-inset-top, 0px);
 }
 
 .navbar.scrolled {
@@ -213,7 +214,7 @@ ul {
     max-width: 1160px;
     margin: 0 auto;
     padding: 0 24px;
-    height: 100%;
+    height: var(--nav-height);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -988,12 +989,15 @@ ul {
 ============================================================ */
 @media (max-width: 768px) {
     :root {
-        --nav-height: 64px;
+        --nav-height: 68px;
     }
 
     /* Nav */
     .logo-wide { display: none; }
-    .logo-square { display: block; }
+    .logo-square {
+        display: block;
+        height: 56px; /* größer als Desktop-Standard (52px) */
+    }
 
     .nav-toggle {
         display: flex;
@@ -1002,7 +1006,7 @@ ul {
 
     .nav-links {
         position: fixed;
-        top: var(--nav-height);
+        top: calc(var(--nav-height) + env(safe-area-inset-top, 0px));
         left: 0;
         right: 0;
         background: var(--navy-dark);
@@ -1040,11 +1044,11 @@ ul {
         font-size: 1rem;
     }
 
-    /* Hero */
+    /* Hero — Safe Area im Padding berücksichtigen */
     .hero {
         min-height: 100vh;
-        min-height: 100svh; /* svh = safe area, zieht Browser-Chrome ab */
-        padding: calc(var(--nav-height) + 28px) 20px 72px;
+        min-height: 100svh;
+        padding: calc(var(--nav-height) + env(safe-area-inset-top, 0px) + 28px) 20px 72px;
     }
 
     .hero-eyebrow {
