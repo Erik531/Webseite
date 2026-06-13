@@ -996,7 +996,11 @@ ul {
     .logo-wide { display: none; }
     .logo-square {
         display: block;
-        height: 68px;
+        height: 90px;
+        /* Transparenten Rand im Bild wegschneiden */
+        object-fit: cover;
+        object-position: center;
+        margin: -10px 0;
     }
 
     .nav-container {
