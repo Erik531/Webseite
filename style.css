@@ -41,6 +41,8 @@ html {
     scroll-behavior: smooth;
     scroll-padding-top: var(--nav-height);
     -webkit-text-size-adjust: 100%;
+    background: #ffffff;
+    color-scheme: light;
 }
 
 body {
@@ -1018,7 +1020,7 @@ ul {
 
     .nav-links {
         position: fixed;
-        top: calc(var(--nav-height) + env(safe-area-inset-top, 0px));
+        top: var(--nav-height);
         left: 0;
         right: 0;
         background: var(--navy-dark);
@@ -1059,8 +1061,7 @@ ul {
     /* Hero — Safe Area im Padding berücksichtigen */
     .hero {
         min-height: 100vh;
-        min-height: 100svh;
-        padding: calc(var(--nav-height) + env(safe-area-inset-top, 0px) + 28px) 20px 72px;
+        padding: calc(var(--nav-height) + 28px) 20px 72px;
     }
 
     .hero-eyebrow {
