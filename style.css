@@ -39,7 +39,7 @@
 
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: calc(var(--nav-height) + env(safe-area-inset-top, 0px));
+    scroll-padding-top: var(--nav-height);
     -webkit-text-size-adjust: 100%;
 }
 
@@ -202,8 +202,6 @@ ul {
     background: var(--white);
     box-shadow: 0 2px 12px rgba(27,43,78,0.10);
     transition: box-shadow 0.3s ease;
-    /* Status-Bar (iOS Safe Area) weiß hinterlegen */
-    padding-top: env(safe-area-inset-top, 0px);
 }
 
 .navbar.scrolled {
