@@ -995,15 +995,11 @@ ul {
     }
 
     /* Nav */
-    .logo-wide { display: none; }
-    .logo-square {
+    .logo-wide {
         display: block;
-        height: 90px;
-        /* Transparenten Rand im Bild wegschneiden */
-        object-fit: cover;
-        object-position: center;
-        margin: -10px 0;
+        height: 62px;
     }
+    .logo-square { display: none; }
 
     .nav-container {
         padding: 0 16px;
