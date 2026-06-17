@@ -991,13 +991,13 @@ ul {
 ============================================================ */
 @media (max-width: 768px) {
     :root {
-        --nav-height: 110px;
+        --nav-height: 130px;
     }
 
     /* Nav */
     .logo-wide {
         display: block;
-        height: 96px;
+        height: 114px;
     }
     .logo-square { display: none; }
 
