@@ -1020,6 +1020,7 @@ ul {
     }
 
     .nav-links {
+        display: none;
         position: fixed;
         top: calc(var(--nav-height) + env(safe-area-inset-top, 0px));
         left: 0;
@@ -1029,14 +1030,12 @@ ul {
         align-items: stretch;
         padding: 20px 24px 36px;
         gap: 4px;
-        transform: translateY(calc(-100% - var(--nav-height) - env(safe-area-inset-top, 0px) - 60px));
-        transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
         box-shadow: 0 8px 32px rgba(0,0,0,0.3);
         z-index: 999;
     }
 
     .nav-links.open {
-        transform: translateY(0);
+        display: flex;
     }
 
     /* FIX: nav-link war var(--navy) = dunkel auf dunklem Hintergrund */
