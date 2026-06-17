@@ -1026,12 +1026,12 @@ ul {
         top: calc(var(--nav-height) + env(safe-area-inset-top, 0px));
         left: 0;
         right: 0;
-        background: var(--navy-dark);
+        background: var(--white);
         flex-direction: column;
         align-items: stretch;
         padding: 20px 24px 36px;
         gap: 4px;
-        box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+        box-shadow: 0 8px 32px rgba(27,43,78,0.15);
         z-index: 999;
     }
 
@@ -1039,17 +1039,16 @@ ul {
         display: flex;
     }
 
-    /* FIX: nav-link war var(--navy) = dunkel auf dunklem Hintergrund */
     .nav-link {
         padding: 14px 16px;
         border-radius: var(--radius-sm);
         font-size: 1rem;
-        color: rgba(255,255,255,0.85);
+        color: var(--navy);
     }
 
     .nav-link:hover {
-        color: var(--white);
-        background: rgba(255,255,255,0.08);
+        color: var(--knx-blue);
+        background: var(--gray-50);
     }
 
     .btn-nav {
