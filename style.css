@@ -39,7 +39,7 @@
 
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: var(--nav-height);
+    scroll-padding-top: calc(var(--nav-height) + env(safe-area-inset-top, 0px));
     -webkit-text-size-adjust: 100%;
     background: #ffffff;
     color-scheme: light;
@@ -204,6 +204,7 @@ ul {
     background: var(--white);
     box-shadow: 0 2px 12px rgba(27,43,78,0.10);
     transition: box-shadow 0.3s ease;
+    padding-top: env(safe-area-inset-top, 0px);
 }
 
 .navbar.scrolled {
@@ -317,7 +318,7 @@ ul {
     display: flex;
     align-items: center;
     overflow: hidden;
-    padding: calc(var(--nav-height) + 40px) 24px 80px;
+    padding: calc(var(--nav-height) + env(safe-area-inset-top, 0px) + 40px) 24px 80px;
 }
 
 .hero::after {
@@ -1020,7 +1021,7 @@ ul {
 
     .nav-links {
         position: fixed;
-        top: var(--nav-height);
+        top: calc(var(--nav-height) + env(safe-area-inset-top, 0px));
         left: 0;
         right: 0;
         background: var(--navy-dark);
@@ -1061,7 +1062,7 @@ ul {
     /* Hero — Safe Area im Padding berücksichtigen */
     .hero {
         min-height: 100vh;
-        padding: calc(var(--nav-height) + 28px) 20px 72px;
+        padding: calc(var(--nav-height) + env(safe-area-inset-top, 0px) + 28px) 20px 72px;
     }
 
     .hero-eyebrow {
