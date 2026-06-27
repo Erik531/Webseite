@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <link rel="icon" type="image/png" href="assets/logo-square.png">
+    <link rel="apple-touch-icon" href="assets/logo-square.png">
+    <title>Kundenprojekte | KNX Consulting Jeschke</title>
+    <meta name="description" content="Referenzprojekte von KNX Consulting Jeschke – realisierte KNX-Installationen und Smart-Home-Projekte im Raum Frankfurt.">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="color-scheme" content="light">
+    <link rel="canonical" href="https://knx-consulting-jeschke.de/kundenprojekte.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css?v=12">
+    <style>
+        .projects-page {
+            padding: 120px 0 100px;
+            min-height: 70vh;
+            background: var(--gray-50);
+        }
+
+        .projects-back {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 2.5rem;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--knx-blue);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        .projects-back:hover {
+            color: var(--navy);
+        }
+
+        .projects-page-header {
+            margin-bottom: 3.5rem;
+        }
+        .projects-page-header h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: clamp(1.8rem, 4vw, 2.8rem);
+            font-weight: 800;
+            color: var(--navy);
+            margin-bottom: 0.75rem;
+        }
+        .projects-page-header p {
+            font-size: 1.05rem;
+            color: var(--text-light);
+            max-width: 560px;
+        }
+
+        .project-card {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            margin-bottom: 3rem;
+        }
+        .project-card-image {
+            width: 100%;
+            max-height: 520px;
+            object-fit: cover;
+            display: block;
+        }
+        .project-card-body {
+            padding: 2rem 2.4rem 2.4rem;
+        }
+        .project-card-body h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: clamp(1.4rem, 3vw, 1.9rem);
+            font-weight: 800;
+            color: var(--navy);
+            margin-bottom: 1rem;
+            position: relative;
+            padding-bottom: 1rem;
+        }
+        .project-card-body h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 48px;
+            height: 3px;
+            background: var(--knx-green);
+            border-radius: 2px;
+        }
+
+        .project-video-wrap {
+            position: relative;
+            aspect-ratio: 9/16;
+            max-width: 420px;
+            margin: 0 auto;
+            background: #000;
+        }
+        .project-video-wrap iframe {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+            display: block;
+        }
+
+        @media (max-width: 600px) {
+            .project-card-body {
+                padding: 1.5rem;
+            }
+            .project-video-wrap {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVIGATION -->
+    <nav class="navbar scrolled" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <img src="assets/logo-wide.png" alt="KNX Consulting Jeschke" class="logo-wide">
+                <img src="assets/logo-square.png" alt="KNX Consulting Jeschke" class="logo-square">
+            </a>
+            <button class="nav-toggle" id="navToggle" aria-label="Menü öffnen" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="kundenprojekte.html" class="nav-link">Kundenprojekte</a></li>
+                <li><a href="index.html#kontakt" class="btn-nav">Jetzt anfragen</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="projects-page">
+        <div class="container">
+
+            <a href="index.html" class="projects-back">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+                Zurück zur Startseite
+            </a>
+
+            <div class="projects-page-header">
+                <h1>Kundenprojekte</h1>
+                <p>Einblicke in realisierte KNX-Projekte – von der Fehleranalyse bis zur vollständigen Neuprogrammierung.</p>
+            </div>
+
+            <!-- Projekt: Zweifamilienhaus -->
+            <div class="project-card">
+                <div class="project-card-body">
+                    <h2>Zweifamilienhaus</h2>
+                </div>
+                <img
+                    src="assets/zweifamilienhaus-outhman.png"
+                    alt="Zweifamilienhaus – KNX Smart Home Projekt"
+                    class="project-card-image"
+                    loading="lazy"
+                >
+                <div class="project-video-wrap">
+                    <iframe
+                        src="https://www.youtube.com/embed/EKm0XmD_Tj8"
+                        title="KNX Visualisierung Zweifamilienhaus"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen
+                        loading="lazy"
+                    ></iframe>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img src="assets/logo-wide.png" alt="KNX Consulting Jeschke" class="footer-logo">
+                    <p>Ihr Spezialist für bestehende KNX-Anlagen. Schnell, zuverlässig und transparent.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Leistungen</h4>
+                    <ul>
+                        <li><a href="index.html#leistungen">Störungsbeseitigung</a></li>
+                        <li><a href="index.html#leistungen">Szenen-Programmierung</a></li>
+                        <li><a href="index.html#leistungen">Projektdaten-Wiederherstellung</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Unternehmen</h4>
+                    <ul>
+                        <li><a href="kundenprojekte.html">Kundenprojekte</a></li>
+                        <li><a href="impressum.html">Impressum</a></li>
+                        <li><a href="datenschutz.html">Datenschutz</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Kontakt</h4>
+                    <p><a href="mailto:jeschke.erik@outlook.de">jeschke.erik@outlook.de</a></p>
+                    <p><a href="tel:+4915753623621">+49 157 53623621</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="year"></span> KNX Consulting Jeschke. Alle Rechte vorbehalten.</p>
+                <p class="footer-legal"><a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
