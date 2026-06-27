@@ -291,8 +291,8 @@ ul {
 .nav-dropdown .nav-btn-ghost,
 .nav-dropdown .nav-btn-primary {
     text-align: center;
-    padding: 14px 20px;
-    font-size: 1rem;
+    padding: 7px 10px;
+    font-size: 0.5rem;
 }
 
 .nav-btn-ghost {
