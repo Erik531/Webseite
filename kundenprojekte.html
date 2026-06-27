@@ -105,8 +105,97 @@
             display: block;
         }
 
+        .project-detail {
+            padding: 2rem 2.4rem 2.4rem;
+            border-top: 1px solid var(--gray-100);
+        }
+
+        .project-vorher {
+            font-size: 0.95rem;
+            color: var(--text-light);
+            margin-bottom: 2rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid var(--gray-100);
+        }
+        .project-vorher strong {
+            color: var(--navy);
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            display: block;
+            margin-bottom: 0.4rem;
+        }
+
+        .problem-block {
+            margin-bottom: 1.75rem;
+            padding-left: 1rem;
+            border-left: 3px solid var(--knx-green);
+        }
+        .problem-block:last-child {
+            margin-bottom: 0;
+        }
+        .problem-label {
+            font-size: 0.75rem;
+            font-weight: 700;
+            font-family: 'Montserrat', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--text-light);
+            margin-bottom: 0.2rem;
+        }
+        .problem-label.loesung {
+            color: var(--knx-green);
+        }
+        .problem-label.bonus {
+            color: var(--knx-blue);
+        }
+        .problem-block p {
+            font-size: 0.95rem;
+            color: var(--text-body);
+            margin-bottom: 0.2rem;
+            line-height: 1.6;
+        }
+        .problem-block em {
+            font-size: 0.88rem;
+            color: var(--text-light);
+            font-style: italic;
+            display: block;
+            margin-bottom: 0.75rem;
+        }
+        .problem-block .loesung-text {
+            font-size: 0.95rem;
+            color: var(--text-main);
+            font-weight: 600;
+        }
+
+        .project-video-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.45rem;
+            margin-top: 0.6rem;
+            font-size: 0.88rem;
+            font-weight: 600;
+            color: var(--knx-blue);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        .project-video-link:hover {
+            color: var(--navy);
+        }
+        .project-video-link svg {
+            flex-shrink: 0;
+        }
+
+        .problem-divider {
+            border: none;
+            border-top: 1px solid var(--gray-100);
+            margin: 1.75rem 0;
+        }
+
         @media (max-width: 600px) {
-            .project-card-body {
+            .project-card-body,
+            .project-detail {
                 padding: 1.5rem;
             }
             .project-video-wrap {
@@ -160,10 +249,64 @@
                     class="project-card-image"
                     loading="lazy"
                 >
+
+                <div class="project-detail">
+
+                    <div class="project-vorher">
+                        <strong>Vorher</strong>
+                        Der Kunde hatte allgemein unzufriedenstellende Programmierung von seiner Anlage. Außerdem hatte er beim Hausbau viel Geld für die Visualisierungs-Hardware ausgegeben und konnte sie nicht nutzen.
+                    </div>
+
+                    <!-- Problem 1 -->
+                    <div class="problem-block">
+                        <p class="problem-label">Problem</p>
+                        <p>Visualisierung läuft nicht</p>
+                        <em>Viel Geld ausgegeben, aber noch keinen Mehrwert bekommen.</em>
+                        <p class="problem-label loesung">Lösung</p>
+                        <p class="loesung-text">Visualisierung eingerichtet</p>
+                        <a href="https://youtube.com/shorts/nxHuifM5LmI?feature=share" target="_blank" rel="noopener noreferrer" class="project-video-link">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                            Video: Visualisierung ansehen
+                        </a>
+                    </div>
+
+                    <hr class="problem-divider">
+
+                    <!-- Problem 2 -->
+                    <div class="problem-block">
+                        <p class="problem-label">Problem</p>
+                        <p>Unzufriedenstellende Tastenbelegung</p>
+                        <em>Wenn Gäste ins Haus kamen und nur das Licht im Flur anschalten wollten, haben sie das Zentrallicht eingeschaltet.</em>
+                        <p class="problem-label loesung">Lösung</p>
+                        <p class="loesung-text">Die Tasten wurden exakt nach Kundenwunsch belegt.</p>
+                    </div>
+
+                    <hr class="problem-divider">
+
+                    <!-- Problem 3 -->
+                    <div class="problem-block">
+                        <p class="problem-label">Problem</p>
+                        <p>Die Taster haben nachts beim Schlafen weiß geleuchtet</p>
+                        <em>Verschlechtert den Schlaf.</em>
+                        <p class="problem-label loesung">Lösung</p>
+                        <p class="loesung-text">Tasten so umprogrammiert, dass sie in den Schlafräumen ausgehen und nur noch 6 LEDs leicht rot leuchten, damit man den Taster auch nachts findet.</p>
+                    </div>
+
+                    <hr class="problem-divider">
+
+                    <!-- Bonus -->
+                    <div class="problem-block">
+                        <p class="problem-label bonus">Kleiner Bonus</p>
+                        <p>Coole Glasfaserfunktion in jedem Raum</p>
+                        <em>Einfach mit der Handfläche auf den Taster gehen und das Licht geht an.</em>
+                    </div>
+
+                </div>
+
                 <div class="project-video-wrap">
                     <iframe
-                        src="https://www.youtube.com/embed/nxHuifM5LmI"
-                        title="KNX Visualisierung Zweifamilienhaus"
+                        src="https://www.youtube.com/embed/1tUD_FVZ0WQ"
+                        title="KNX Glasfaserfunktion Zweifamilienhaus"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowfullscreen
                         loading="lazy"
