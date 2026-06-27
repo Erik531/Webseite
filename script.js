@@ -13,36 +13,39 @@
     onScroll();
 })();
 
-// ─── Mobile burger menu ───────────────────────────────────
+// ─── Mobile side drawer ───────────────────────────────────
 (function initMobileMenu() {
-    const toggle   = document.getElementById('navToggle');
-    const dropdown = document.getElementById('navDropdown');
-    if (!toggle || !dropdown) return;
+    const toggle  = document.getElementById('navToggle');
+    const drawer  = document.getElementById('navDrawer');
+    const overlay = document.getElementById('navOverlay');
+    const close   = document.getElementById('navClose');
+    if (!toggle || !drawer || !overlay) return;
+
+    function openDrawer() {
+        drawer.classList.add('open');
+        overlay.classList.add('open');
+        toggle.classList.add('active');
+        toggle.setAttribute('aria-expanded', 'true');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeDrawer() {
+        drawer.classList.remove('open');
+        overlay.classList.remove('open');
+        toggle.classList.remove('active');
+        toggle.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+    }
 
     toggle.addEventListener('click', () => {
-        const isOpen = dropdown.classList.toggle('open');
-        toggle.classList.toggle('active', isOpen);
-        toggle.setAttribute('aria-expanded', String(isOpen));
-        document.body.style.overflow = isOpen ? 'hidden' : '';
+        drawer.classList.contains('open') ? closeDrawer() : openDrawer();
     });
 
-    dropdown.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', () => {
-            dropdown.classList.remove('open');
-            toggle.classList.remove('active');
-            toggle.setAttribute('aria-expanded', 'false');
-            document.body.style.overflow = '';
-        });
-    });
+    if (close) close.addEventListener('click', closeDrawer);
+    overlay.addEventListener('click', closeDrawer);
 
-    document.addEventListener('click', e => {
-        const navbar = document.getElementById('navbar');
-        if (navbar && !navbar.contains(e.target) && dropdown.classList.contains('open')) {
-            dropdown.classList.remove('open');
-            toggle.classList.remove('active');
-            toggle.setAttribute('aria-expanded', 'false');
-            document.body.style.overflow = '';
-        }
+    drawer.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', closeDrawer);
     });
 })();
 
