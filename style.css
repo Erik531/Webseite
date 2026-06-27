@@ -28,7 +28,7 @@
     --shadow-card: 0 2px 12px rgba(27,43,78,0.08);
     --transition:  all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-slow: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    --nav-height:  64px;
+    --nav-height:  0px;
 }
 
 *, *::before, *::after {
@@ -194,120 +194,8 @@ ul {
 }
 
 /* ============================================================
-   NAVBAR
+   NAVBAR — wird neu aufgebaut
 ============================================================ */
-.navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1000;
-    background: var(--white);
-    box-shadow: 0 2px 12px rgba(27,43,78,0.10);
-    transition: box-shadow 0.3s ease;
-    padding-top: env(safe-area-inset-top, 0px);
-}
-
-.navbar.scrolled {
-    box-shadow: 0 2px 20px rgba(27,43,78,0.15);
-}
-
-.nav-container {
-    max-width: 1160px;
-    margin: 0 auto;
-    padding: 0 24px;
-    height: var(--nav-height);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 24px;
-}
-
-.nav-logo {
-    flex-shrink: 0;
-    display: flex;
-    align-items: center;
-}
-
-.logo-wide {
-    height: 58px;
-    width: auto;
-    display: block;
-}
-
-.logo-square {
-    height: 52px;
-    width: auto;
-    display: none;
-}
-
-.nav-links {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.nav-link {
-    padding: 8px 16px;
-    color: var(--navy);
-    font-family: 'Montserrat', sans-serif;
-    font-size: 0.9rem;
-    font-weight: 600;
-    border-radius: var(--radius-sm);
-    transition: var(--transition);
-}
-
-.nav-link:hover {
-    color: var(--knx-blue);
-    background: var(--gray-50);
-}
-
-.btn-nav {
-    display: inline-block;
-    padding: 9px 20px;
-    background: var(--knx-blue);
-    color: var(--white);
-    border-radius: var(--radius-sm);
-    font-family: 'Montserrat', sans-serif;
-    font-size: 0.9rem;
-    font-weight: 600;
-    border: 2px solid var(--knx-blue);
-    transition: var(--transition);
-    margin-left: 8px;
-}
-
-.btn-nav:hover {
-    background: var(--knx-blue-light);
-    border-color: var(--knx-blue-light);
-    color: var(--white);
-    transform: translateY(-1px);
-    box-shadow: 0 4px 12px rgba(30,95,173,0.3);
-}
-
-.nav-toggle {
-    display: none;
-    flex-direction: column;
-    gap: 5px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 8px;
-    border-radius: var(--radius-sm);
-    transition: var(--transition);
-}
-
-.nav-toggle span {
-    display: block;
-    width: 24px;
-    height: 2px;
-    background: var(--navy);
-    border-radius: 2px;
-    transition: var(--transition);
-}
-
-.nav-toggle.active span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-.nav-toggle.active span:nth-child(2) { opacity: 0; transform: scaleX(0); }
-.nav-toggle.active span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
 /* ============================================================
    HERO
@@ -990,70 +878,6 @@ ul {
    RESPONSIVE – MOBILE (≤ 768px)
 ============================================================ */
 @media (max-width: 768px) {
-    :root {
-        --nav-height: 130px;
-    }
-
-    /* Nav */
-    .logo-wide {
-        display: block;
-        height: 114px;
-    }
-    .logo-square { display: none; }
-
-    .nav-container {
-        padding: 0 16px;
-    }
-
-    .nav-toggle {
-        display: flex;
-        z-index: 10;
-        padding: 10px;
-    }
-
-    .nav-toggle span {
-        width: 28px;
-        height: 2.5px;
-    }
-
-    .nav-links {
-        display: none;
-        position: fixed;
-        top: calc(var(--nav-height) + env(safe-area-inset-top, 0px));
-        left: 0;
-        right: 0;
-        background: var(--white);
-        flex-direction: column;
-        align-items: stretch;
-        padding: 20px 24px 36px;
-        gap: 4px;
-        box-shadow: 0 8px 32px rgba(27,43,78,0.15);
-        z-index: 999;
-    }
-
-    .nav-links.open {
-        display: flex;
-    }
-
-    .nav-link {
-        padding: 14px 16px;
-        border-radius: var(--radius-sm);
-        font-size: 1rem;
-        color: var(--navy);
-    }
-
-    .nav-link:hover {
-        color: var(--knx-blue);
-        background: var(--gray-50);
-    }
-
-    .btn-nav {
-        margin: 10px 0 0;
-        text-align: center;
-        padding: 14px 20px;
-        font-size: 1rem;
-    }
-
     /* Hero — Safe Area im Padding berücksichtigen */
     .hero {
         min-height: 100vh;

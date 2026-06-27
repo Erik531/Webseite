@@ -2,52 +2,7 @@
    KNX Consulting Jeschke – main script
 ============================================================ */
 
-// ─── Navbar scroll behavior ───────────────────────────────
-(function initNavbar() {
-    const navbar = document.getElementById('navbar');
-    if (!navbar) return;
-
-    function onScroll() {
-        navbar.classList.toggle('scrolled', window.scrollY > 40);
-    }
-
-    window.addEventListener('scroll', onScroll, { passive: true });
-    onScroll();
-})();
-
-// ─── Mobile menu toggle ───────────────────────────────────
-(function initMobileMenu() {
-    const toggle = document.getElementById('navToggle');
-    const links  = document.getElementById('navLinks');
-    if (!toggle || !links) return;
-
-    toggle.addEventListener('click', () => {
-        const isOpen = links.classList.toggle('open');
-        toggle.classList.toggle('active', isOpen);
-        toggle.setAttribute('aria-expanded', String(isOpen));
-        document.body.style.overflow = isOpen ? 'hidden' : '';
-    });
-
-    // Close menu when a nav link is clicked
-    links.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', () => {
-            links.classList.remove('open');
-            toggle.classList.remove('active');
-            toggle.setAttribute('aria-expanded', 'false');
-            document.body.style.overflow = '';
-        });
-    });
-
-    // Close on outside click
-    document.addEventListener('click', e => {
-        if (!navbar.contains(e.target) && links.classList.contains('open')) {
-            links.classList.remove('open');
-            toggle.classList.remove('active');
-            toggle.setAttribute('aria-expanded', 'false');
-            document.body.style.overflow = '';
-        }
-    });
-})();
+// ─── Navbar — wird neu aufgebaut ──────────────────────────
 
 // ─── Scroll-reveal (Intersection Observer) ────────────────
 (function initReveal() {
