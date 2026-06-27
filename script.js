@@ -13,6 +13,39 @@
     onScroll();
 })();
 
+// ─── Mobile burger menu ───────────────────────────────────
+(function initMobileMenu() {
+    const toggle   = document.getElementById('navToggle');
+    const dropdown = document.getElementById('navDropdown');
+    if (!toggle || !dropdown) return;
+
+    toggle.addEventListener('click', () => {
+        const isOpen = dropdown.classList.toggle('open');
+        toggle.classList.toggle('active', isOpen);
+        toggle.setAttribute('aria-expanded', String(isOpen));
+        document.body.style.overflow = isOpen ? 'hidden' : '';
+    });
+
+    dropdown.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            dropdown.classList.remove('open');
+            toggle.classList.remove('active');
+            toggle.setAttribute('aria-expanded', 'false');
+            document.body.style.overflow = '';
+        });
+    });
+
+    document.addEventListener('click', e => {
+        const navbar = document.getElementById('navbar');
+        if (navbar && !navbar.contains(e.target) && dropdown.classList.contains('open')) {
+            dropdown.classList.remove('open');
+            toggle.classList.remove('active');
+            toggle.setAttribute('aria-expanded', 'false');
+            document.body.style.overflow = '';
+        }
+    });
+})();
+
 // ─── Scroll-reveal (Intersection Observer) ────────────────
 (function initReveal() {
     const elements = document.querySelectorAll('.reveal');

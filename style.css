@@ -232,7 +232,7 @@ ul {
 }
 
 .nav-logo img {
-    height: 48px;
+    height: 60px;
     width: auto;
     display: block;
 }
@@ -242,6 +242,57 @@ ul {
     align-items: center;
     gap: 12px;
     flex-shrink: 0;
+}
+
+.nav-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: var(--radius-sm);
+    transition: var(--transition);
+    flex-shrink: 0;
+}
+
+.nav-toggle span {
+    display: block;
+    width: 26px;
+    height: 2.5px;
+    background: var(--navy);
+    border-radius: 2px;
+    transition: var(--transition);
+}
+
+.nav-toggle.active span:nth-child(1) { transform: translateY(7.5px) rotate(45deg); }
+.nav-toggle.active span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+.nav-toggle.active span:nth-child(3) { transform: translateY(-7.5px) rotate(-45deg); }
+
+.nav-dropdown {
+    display: none;
+    position: fixed;
+    top: calc(var(--nav-height) + env(safe-area-inset-top, 0px));
+    left: 0;
+    right: 0;
+    background: var(--white);
+    flex-direction: column;
+    padding: 16px 20px 28px;
+    gap: 8px;
+    box-shadow: 0 8px 32px rgba(27,43,78,0.15);
+    z-index: 999;
+}
+
+.nav-dropdown.open {
+    display: flex;
+}
+
+.nav-dropdown .nav-btn-ghost,
+.nav-dropdown .nav-btn-primary {
+    text-align: center;
+    padding: 14px 20px;
+    font-size: 1rem;
 }
 
 .nav-btn-ghost {
@@ -286,7 +337,7 @@ ul {
 
 @media (max-width: 768px) {
     :root {
-        --nav-height: 64px;
+        --nav-height: 68px;
     }
 
     .nav-container {
@@ -295,31 +346,17 @@ ul {
     }
 
     .nav-logo img {
-        height: 36px;
+        height: 45px;
     }
 
-    .nav-btn-ghost {
-        padding: 7px 12px;
-        font-size: 0.78rem;
-        border-width: 1.5px;
+    /* Desktop-Buttons ausblenden */
+    .nav-actions {
+        display: none;
     }
 
-    .nav-btn-primary {
-        padding: 7px 12px;
-        font-size: 0.78rem;
-        border-width: 1.5px;
-    }
-}
-
-@media (max-width: 360px) {
-    .nav-btn-ghost {
-        padding: 6px 10px;
-        font-size: 0.72rem;
-    }
-
-    .nav-btn-primary {
-        padding: 6px 10px;
-        font-size: 0.72rem;
+    /* Burger-Button einblenden */
+    .nav-toggle {
+        display: flex;
     }
 }
 
