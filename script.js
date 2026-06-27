@@ -2,7 +2,16 @@
    KNX Consulting Jeschke – main script
 ============================================================ */
 
-// ─── Navbar — wird neu aufgebaut ──────────────────────────
+// ─── Navbar scroll shadow ─────────────────────────────────
+(function initNavbar() {
+    const navbar = document.getElementById('navbar');
+    if (!navbar) return;
+    function onScroll() {
+        navbar.classList.toggle('scrolled', window.scrollY > 10);
+    }
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+})();
 
 // ─── Scroll-reveal (Intersection Observer) ────────────────
 (function initReveal() {
