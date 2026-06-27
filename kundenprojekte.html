@@ -219,6 +219,13 @@
             border: none;
         }
 
+        .problem-inline-img {
+            flex-shrink: 0;
+            width: 220px;
+            border-radius: var(--radius-sm);
+            object-fit: contain;
+        }
+
         @media (max-width: 600px) {
             .project-card-body,
             .project-detail {
@@ -235,6 +242,12 @@
                 aspect-ratio: 9/16;
                 max-width: 280px;
                 margin: 0 auto;
+            }
+            .problem-inline-img {
+                width: calc(100% + 3rem);
+                max-width: none;
+                margin-left: -1.5rem;
+                border-radius: 0;
             }
         }
     </style>
@@ -326,7 +339,7 @@
                         <img
                             src="assets/glastaster-vorher-nachher.png"
                             alt="Glastaster Tastenbelegung vorher und nachher"
-                            style="flex-shrink:0; width:220px; border-radius:var(--radius-sm); object-fit:contain;"
+                            class="problem-inline-img"
                             loading="lazy"
                         >
                     </div>
