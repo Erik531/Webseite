@@ -171,17 +171,17 @@ ul {
     box-shadow: 0 8px 24px rgba(26, 58, 107, 0.3);
 }
 
-/* Outline: auf marineblauem Hintergrund → weiße Schaltfläche, marineblaue Schrift */
+/* Outline: Sekundär-Button auf weißem Hintergrund → transparenter Hintergrund, marineblaue Schrift & Rand */
 .btn-outline {
-    background: var(--white);
+    background: transparent;
     color: var(--navy);
-    border-color: var(--white);
+    border-color: var(--navy);
 }
 
 .btn-outline:hover {
-    background: rgba(255,255,255,0.9);
-    border-color: var(--white);
-    color: var(--navy);
+    background: var(--navy);
+    border-color: var(--navy);
+    color: var(--white);
     transform: translateY(-2px);
 }
 
@@ -190,15 +190,13 @@ ul {
     justify-content: center;
 }
 
-/* Hero & SEO-Region: marineblaue Hintergründe → primäre Buttons ebenfalls weiß */
-.hero .btn-primary,
+/* SEO-Region: marineblaue Hintergründe → primäre Buttons weiß */
 .seo-region .btn-primary {
     background: var(--white);
     color: var(--navy);
     border-color: var(--white);
 }
 
-.hero .btn-primary:hover,
 .seo-region .btn-primary:hover {
     background: rgba(255,255,255,0.9);
     color: var(--navy);
@@ -443,7 +441,7 @@ ul {
 .hero {
     position: relative;
     min-height: 100vh;
-    background: linear-gradient(145deg, var(--navy-dark) 0%, var(--navy) 50%, var(--navy-mid) 100%);
+    background: var(--white);
     display: flex;
     align-items: center;
     overflow: hidden;
@@ -457,7 +455,7 @@ ul {
     left: 0;
     right: 0;
     height: 120px;
-    background: linear-gradient(to bottom, transparent, rgba(26,58,107,0.15));
+    background: linear-gradient(to bottom, transparent, rgba(26,58,107,0.04));
     pointer-events: none;
 }
 
@@ -489,25 +487,25 @@ ul {
     font-weight: 700;
     letter-spacing: 2.5px;
     text-transform: uppercase;
-    color: rgba(255,255,255,0.75);
+    color: var(--text-light);
     margin-bottom: 20px;
 }
 
 .hero h1 {
     font-size: clamp(2rem, 5vw, 3.5rem);
     font-weight: 800;
-    color: var(--white);
+    color: var(--text-main);
     margin-bottom: 24px;
     line-height: 1.15;
 }
 
 .hero-accent {
-    color: rgba(255,255,255,0.85);
+    color: var(--navy);
 }
 
 .hero-sub {
     font-size: clamp(1rem, 2vw, 1.15rem);
-    color: rgba(255,255,255,0.75);
+    color: var(--text-body);
     margin-bottom: 40px;
     max-width: 560px;
     margin-left: auto;
@@ -534,7 +532,7 @@ ul {
     display: block;
     width: 24px;
     height: 40px;
-    border: 2px solid rgba(255,255,255,0.3);
+    border: 2px solid rgba(26,58,107,0.25);
     border-radius: 12px;
     position: relative;
 }
@@ -547,7 +545,7 @@ ul {
     transform: translateX(-50%);
     width: 4px;
     height: 8px;
-    background: rgba(255,255,255,0.6);
+    background: rgba(26,58,107,0.45);
     border-radius: 2px;
     animation: scrollBob 1.8s ease-in-out infinite;
 }
