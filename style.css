@@ -1005,11 +1005,19 @@ ul {
     margin-top: -4px;
 }
 
+.services-note {
+    text-align: center;
+    margin-top: 32px;
+    color: var(--navy);
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
 /* ============================================================
    FOOTER
 ============================================================ */
 .footer {
-    background: var(--navy-dark);
+    background: var(--navy);
     color: rgba(255,255,255,0.7);
     padding: 64px 0 0;
 }
