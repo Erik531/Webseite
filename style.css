@@ -560,61 +560,6 @@ ul {
 }
 
 /* ============================================================
-   PROBLEM SECTION
-============================================================ */
-.problems {
-    padding: 96px 0;
-    background: var(--white);
-    position: relative;
-}
-
-.problem-cards {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 28px;
-}
-
-.problem-card {
-    background: var(--white);
-    border-radius: var(--radius-md);
-    padding: 32px 28px;
-    box-shadow: var(--shadow-card);
-    border: 1px solid var(--gray-100);
-    transition: var(--transition-slow);
-}
-
-.problem-card:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-md);
-    border-color: var(--gray-200);
-}
-
-.problem-icon {
-    width: 60px;
-    height: 60px;
-    background: rgba(26,58,107,0.07);
-    border-radius: var(--radius-md);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 20px;
-    color: var(--navy);
-    flex-shrink: 0;
-}
-
-.problem-card h3 {
-    font-size: 1.05rem;
-    margin-bottom: 12px;
-    color: var(--text-main);
-}
-
-.problem-card p {
-    font-size: 0.93rem;
-    color: var(--text-body);
-    line-height: 1.65;
-}
-
-/* ============================================================
    ABOUT VIDEO
 ============================================================ */
 .about-video {
@@ -1216,21 +1161,12 @@ ul {
     }
 
     /* Sections */
-    .problems, .services, .why, .contact {
+    .services, .why, .contact {
         padding: 56px 0;
     }
 
     .section-header {
         margin-bottom: 32px;
-    }
-
-    .problem-cards {
-        grid-template-columns: 1fr;
-        gap: 16px;
-    }
-
-    .problem-card {
-        padding: 24px 20px;
     }
 
     .service-grid {
@@ -1323,7 +1259,7 @@ ul {
         padding: 0 16px;
     }
 
-    .problems, .services, .why, .contact {
+    .services, .why, .contact {
         padding: 48px 0;
     }
 
@@ -1364,9 +1300,6 @@ textarea:focus-visible {
 /* ============================================================
    STAGGERED REVEAL DELAYS
 ============================================================ */
-.problem-card:nth-child(2) { transition-delay: 0.1s; }
-.problem-card:nth-child(3) { transition-delay: 0.2s; }
-
 .service-card:nth-child(2) { transition-delay: 0.1s; }
 .service-card:nth-child(3) { transition-delay: 0.2s; }
 .service-card:nth-child(4) { transition-delay: 0.15s; }
