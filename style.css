@@ -443,8 +443,12 @@ ul {
    ABOUT VIDEO
 ============================================================ */
 .about-video {
-    padding: 96px 0;
+    padding: 140px 0 96px;
     background: var(--gray-50, #f8f9fa);
+}
+
+.about-video .section-header {
+    margin-bottom: 16px;
 }
 
 .about-video-text {
