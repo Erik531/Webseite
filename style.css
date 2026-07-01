@@ -778,6 +778,32 @@ ul {
     transition: width 1s ease;
 }
 
+.offer-cta {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.btn-outline-white {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 32px;
+    border: 2px solid var(--white);
+    border-radius: var(--radius-sm, 8px);
+    color: var(--white);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+    transition: background 0.2s, color 0.2s;
+}
+
+.btn-outline-white:hover {
+    background: var(--white);
+    color: var(--navy);
+}
+
 .offer-scale-ends {
     display: flex;
     justify-content: space-between;
