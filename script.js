@@ -1,5 +1,5 @@
 /* ============================================================
-   KNX Consulting Jeschke – main script
+   Jeschke Gebäudeautomation – main script
 ============================================================ */
 
 // ─── Navbar scroll shadow ─────────────────────────────────
@@ -134,7 +134,7 @@
                 errEl.style.cssText = 'color:#f87171;margin-top:.5rem;font-size:.9rem';
                 hint ? hint.before(errEl) : form.append(errEl);
             }
-            errEl.textContent = `Fehler beim Senden: ${err.message}. Bitte versuchen Sie es erneut oder schreiben Sie direkt an jeschke.erik@outlook.de.`;
+            errEl.textContent = `Fehler beim Senden: ${err.message}. Bitte versuchen Sie es erneut oder schreiben Sie direkt an info@jeschke-ga.de.`;
         }
     });
 })();
