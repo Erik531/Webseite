@@ -110,63 +110,34 @@
             border-top: 1px solid var(--gray-100);
         }
 
-        .project-vorher {
-            font-size: 0.95rem;
-            color: var(--text-light);
-            margin-bottom: 2rem;
-            padding-bottom: 1.5rem;
-            border-bottom: 1px solid var(--gray-100);
-        }
-        .project-vorher strong {
-            color: var(--navy);
-            font-family: 'Montserrat', sans-serif;
-            font-size: 0.8rem;
-            text-transform: uppercase;
-            letter-spacing: 0.08em;
-            display: block;
-            margin-bottom: 0.4rem;
-        }
-
-        .problem-block {
+        .feature-block {
             margin-bottom: 1.75rem;
             padding-left: 1rem;
-            border-left: 3px solid var(--navy);
+            border-left: 3px solid var(--accent);
         }
-        .problem-block:last-child {
+        .feature-block:last-child {
             margin-bottom: 0;
         }
-        .problem-label {
+        .feature-label {
             font-size: 0.75rem;
             font-weight: 700;
             font-family: 'Montserrat', sans-serif;
             text-transform: uppercase;
             letter-spacing: 0.1em;
-            color: var(--text-light);
-            margin-bottom: 0.2rem;
+            color: var(--accent-dark);
+            margin-bottom: 0.4rem;
         }
-        .problem-label.loesung {
-            color: var(--navy);
-        }
-        .problem-label.bonus {
-            color: var(--navy);
-        }
-        .problem-block p {
+        .feature-block p {
             font-size: 0.95rem;
             color: var(--text-body);
             margin-bottom: 0.2rem;
             line-height: 1.6;
         }
-        .problem-block em {
-            font-size: 0.88rem;
-            color: var(--text-light);
-            font-style: italic;
-            display: block;
-            margin-bottom: 0.75rem;
-        }
-        .problem-block .loesung-text {
-            font-size: 0.95rem;
+        .feature-title {
+            font-size: 1rem;
             color: var(--text-main);
-            font-weight: 600;
+            font-weight: 700;
+            margin-bottom: 0.4rem;
         }
 
         .project-video-link {
@@ -187,22 +158,22 @@
             flex-shrink: 0;
         }
 
-        .problem-divider {
+        .feature-divider {
             border: none;
             border-top: 1px solid var(--gray-100);
             margin: 1.75rem 0;
         }
 
-        .problem-with-video {
+        .feature-with-video {
             display: flex;
             align-items: flex-start;
             gap: 1.5rem;
         }
-        .problem-with-video .problem-block {
+        .feature-with-video .feature-block {
             flex: 1;
             margin-bottom: 0;
         }
-        .problem-inline-video {
+        .feature-inline-video {
             flex-shrink: 0;
             width: 220px;
             aspect-ratio: 9/16;
@@ -211,7 +182,7 @@
             background: #000;
             position: relative;
         }
-        .problem-inline-video iframe {
+        .feature-inline-video iframe {
             position: absolute;
             inset: 0;
             width: 100%;
@@ -219,7 +190,7 @@
             border: none;
         }
 
-        .problem-inline-img {
+        .feature-inline-img {
             flex-shrink: 0;
             width: 220px;
             border-radius: var(--radius-sm);
@@ -234,16 +205,16 @@
             .project-video-wrap {
                 max-width: 100%;
             }
-            .problem-with-video {
+            .feature-with-video {
                 flex-direction: column;
             }
-            .problem-inline-video {
+            .feature-inline-video {
                 width: 100%;
                 aspect-ratio: 9/16;
                 max-width: 280px;
                 margin: 0 auto;
             }
-            .problem-inline-img {
+            .feature-inline-img {
                 width: calc(100% + 3rem);
                 max-width: none;
                 margin-left: -1.5rem;
@@ -308,21 +279,14 @@
 
                 <div class="project-detail">
 
-                    <div class="project-vorher">
-                        <strong>Ausgangssituation</strong>
-                        Der Kunde hatte allgemein unzufriedenstellende Programmierung von seiner Anlage. Zudem hat er viel Geld für die Visualisierung ausgegeben und konnte sie nicht nutzen.
-                    </div>
-
-                    <!-- Problem 1 -->
-                    <div class="problem-with-video">
-                        <div class="problem-block">
-                            <p class="problem-label">Problem</p>
-                            <p>Visualisierung läuft nicht</p>
-                            <em>Viel Geld für die Visualisierung ausgegeben, aber noch keinen Mehrwert dafür bekommen.</em>
-                            <p class="problem-label loesung">Lösung</p>
-                            <p class="loesung-text">Visualisierung eingerichtet</p>
+                    <!-- Visualisierung -->
+                    <div class="feature-with-video">
+                        <div class="feature-block">
+                            <p class="feature-label">Visualisierung</p>
+                            <p class="feature-title">Visualisierung eingerichtet und in Betrieb genommen</p>
+                            <p>Komplette KNX-Visualisierung für Smartphone und Tablet aufgesetzt, sodass sämtliche Räume, Szenen und Funktionen zentral steuerbar sind.</p>
                         </div>
-                        <div class="problem-inline-video">
+                        <div class="feature-inline-video">
                             <iframe
                                 src="https://www.youtube.com/embed/-OWYCKSL0qA"
                                 title="KNX Visualisierung Zweifamilienhaus"
@@ -333,18 +297,16 @@
                         </div>
                     </div>
 
-                    <hr class="problem-divider">
+                    <hr class="feature-divider">
 
-                    <!-- Problem 3 -->
-                    <div class="problem-with-video">
-                        <div class="problem-block">
-                            <p class="problem-label">Problem</p>
-                            <p>Die Taster haben nachts beim Schlafen weiß geleuchtet</p>
-                            <em>Verschlechtert den Schlaf.</em>
-                            <p class="problem-label loesung">Lösung</p>
-                            <p class="loesung-text">Tasten so umprogrammiert, dass sie in den Schlafräumen ausgehen und nur noch 6 LEDs leicht rot leuchten, damit man den Taster auch nachts findet.</p>
+                    <!-- Taster-Programmierung -->
+                    <div class="feature-with-video">
+                        <div class="feature-block">
+                            <p class="feature-label">Taster-Programmierung</p>
+                            <p class="feature-title">Nachtbeleuchtung der Taster individuell programmiert</p>
+                            <p>Taster in den Schlafräumen so programmiert, dass sie nachts nur noch mit 6 dezenten roten LEDs leuchten – gut auffindbar im Dunkeln, ohne den Schlaf zu stören.</p>
                         </div>
-                        <div class="problem-inline-video">
+                        <div class="feature-inline-video">
                             <iframe
                                 src="https://www.youtube.com/embed/AH3Bs7SXkvE"
                                 title="KNX Taster Nachtbeleuchtung"
@@ -355,16 +317,16 @@
                         </div>
                     </div>
 
-                    <hr class="problem-divider">
+                    <hr class="feature-divider">
 
-                    <!-- Bonus -->
-                    <div class="problem-with-video">
-                        <div class="problem-block">
-                            <p class="problem-label bonus">Bonus – Kinder Funktion</p>
-                            <p>Praktisch für kleine Kinder: einfach mit der Handfläche auf den Taster gehen und das Licht geht an.</p>
-                            <em>In jedem Raum integriert</em>
+                    <!-- Bedienkomfort -->
+                    <div class="feature-with-video">
+                        <div class="feature-block">
+                            <p class="feature-label">Bedienkomfort</p>
+                            <p class="feature-title">Kinderfreundliche Lichtsteuerung</p>
+                            <p>In jedem Raum eine Funktion integriert, mit der schon kleine Kinder das Licht einfach durch Auflegen der Handfläche auf den Taster einschalten können.</p>
                         </div>
-                        <div class="problem-inline-video">
+                        <div class="feature-inline-video">
                             <iframe
                                 src="https://www.youtube.com/embed/1tUD_FVZ0WQ"
                                 title="KNX Glasfaserfunktion Zweifamilienhaus"
