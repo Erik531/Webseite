@@ -144,3 +144,36 @@
     const el = document.getElementById('year');
     if (el) el.textContent = new Date().getFullYear();
 })();
+
+// ─── Adapt header/footer logo based on page background (dark/light) ───
+(function adaptLogoForBackground() {
+    function parseRGB(rgb) {
+        const m = rgb.match(/rgba?\((\d+),\s*(\d+),\s*(\d+)/i);
+        if (!m) return null;
+        return [parseInt(m[1], 10), parseInt(m[2], 10), parseInt(m[3], 10)];
+    }
+
+    function isBackgroundDark() {
+        const main = document.querySelector('main') || document.body;
+        const bg = window.getComputedStyle(main).backgroundColor || '';
+        const rgb = parseRGB(bg);
+        if (!rgb) return false;
+        const [r, g, b] = rgb;
+        const luminance = (0.2126 * r + 0.7152 * g + 0.0722 * b) / 255;
+        return luminance < 0.5;
+    }
+
+    function updateLogos() {
+        const dark = isBackgroundDark();
+        const navImg = document.querySelector('.nav-logo img');
+        const footerImg = document.querySelector('.footer-logo');
+        const darkSrc = 'assets/Firmenlogo_dunkel.png?v=3';
+        const lightSrc = 'assets/Logo_hell_v2.png?v=3';
+        if (navImg) navImg.src = dark ? darkSrc : lightSrc;
+        if (footerImg) footerImg.src = dark ? darkSrc : lightSrc;
+    }
+
+    document.addEventListener('DOMContentLoaded', updateLogos);
+    window.addEventListener('load', updateLogos);
+    window.addEventListener('resize', updateLogos);
+})();
