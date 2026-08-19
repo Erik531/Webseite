@@ -1,5 +1,5 @@
 /* ============================================================
-   Jeschke Gebäudeautomation – main script
+    Gebäudeautomation Jeschke – main script
 ============================================================ */
 
 // ─── Navbar scroll shadow ─────────────────────────────────
