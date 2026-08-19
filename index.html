@@ -63,6 +63,36 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css?v=16">
+    <style>
+    /* Subtile Hintergrundbilder für die Landing-Page (dezent, professionell) */
+    .hero { position: relative; overflow: hidden; }
+    .hero::before,
+    .hero::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: 0;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        pointer-events: none;
+        transform: translateZ(0);
+    }
+    .hero::before {
+        background-image: url('assets/zweifamilienhaus-outhman.png');
+        opacity: 0.12;
+        filter: saturate(0.9) blur(0.6px);
+    }
+    .hero::after {
+        background-image: url('assets/3db602c9-6c4a-48fe-830f-4647250aa746.JPG');
+        opacity: 0.05;
+        mix-blend-mode: overlay;
+    }
+    .hero-content { position: relative; z-index: 1; }
+    @media (max-width: 800px) {
+        .hero::before, .hero::after { display: none; }
+    }
+    </style>
 </head>
 <body>
 
@@ -146,6 +176,7 @@
             <p class="hero-eyebrow">KNX Programmierung für B2B Kunden</p>
             <h1>Sie installieren.<br>Ich programmiere<br><span class="hero-accent">Ihre KNX-Projekte.</span></h1>
             <p class="hero-sub">Als externer KNX-Programmierer und ETS-Spezialist unterstütze ich Elektrofachbetriebe und Errichter im Raum Frankfurt &amp; Rhein-Main bei ETS-Programmierung, Inbetriebnahme und Störungsbehebung – zuverlässig, termingerecht und ohne dass Sie eigenes KNX-Know-how aufbauen müssen.</p>
+            <p class="hero-note" style="margin-top:0.6rem;font-weight:600;color:var(--accent);">Neu: Ich nehme jetzt auch Privatkunden an.</p>
             <div class="hero-ctas">
                 <a href="#leistungen" class="btn btn-primary">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 8 16 12 12 16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
